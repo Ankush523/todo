@@ -1,0 +1,72 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_todo",
+				"type": "string"
+			}
+		],
+		"name": "add",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_todoid",
+				"type": "uint256"
+			}
+		],
+		"name": "change",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "receiveid",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_todoid",
+				"type": "uint256"
+			}
+		],
+		"name": "receivemsg",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "work",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "done",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct todo.Todo",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
