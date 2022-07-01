@@ -47,7 +47,7 @@ const GetList = () => {
                         <p className='text-[20px]'>Status : {showStatus((lists[index].done).toString())}</p>
                         </div>
                     <br/>
-                    <button className='bg-slate-100 w-[fit-content] p-1 rounded-md hover:shadow' onClick={()=>change(index)}>Change Status</button>
+                    <button className='bg-slate-100 w-[fit-content] p-1 rounded-md hover:shadow' onClick={()=>change(lists[index].todoid)}>Change Status</button>
                     <br/>
                     <br/>
                     </div>

@@ -8,7 +8,7 @@ const GetContract = () => {
     const{data:signer}=useSigner();
 
     const contract = useContract({
-        addressOrName: '0xa5082E4719F5B1bb12b87078a7E5Fd18779515e9',
+        addressOrName: '0x1FD8dB0C97170421a7FFcA6a2bB8D736cB05BCA2',
         contractInterface: TodoABI,
         signerOrProvider: signer,
       })

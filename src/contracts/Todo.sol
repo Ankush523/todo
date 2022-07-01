@@ -5,6 +5,7 @@ pragma solidity ^0.8.0;
 contract todo{
     uint todoid;
     struct Todo{
+        uint todoid;
         string work;
         bool done;
     }
@@ -13,7 +14,7 @@ contract todo{
 
     function add(string memory _todo) external {
         ++todoid;
-        todos[msg.sender][todoid]=Todo(_todo,false);
+        todos[msg.sender][todoid]=Todo(todoid,_todo,false);
     }
 
     function change(uint _todoid)external{
