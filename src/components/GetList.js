@@ -8,6 +8,7 @@ const GetList = () => {
 
     const change =(key) =>{
          contract.change(key)
+         showStatus();
     }
 
     const getList = async() => {
@@ -23,16 +24,22 @@ const GetList = () => {
         console.log(lists)
     }
 
+    const showStatus=(temp)=>{
+        return((temp === 'false')?<label>Not Done Yet</label>:<label>Already done </label>)
+    }
+
     return ( 
         <div>
             <br/>
             <br/>
-            <button className='font-mono  ml-4 bg-blue-400 rounded-xl w-[fit-content] pl-2 pr-2 hover:shadow-lg' onClick={getList} >Get List</button>
+            <button className='font-mono rounded-md w-[fit-content] px-2 text-[20px] bg-slate-100 hover:shadow-lg' onClick={getList} >Get List of work</button>
             {
                 Object.keys(lists).map((list,index)=>(
                     <div>
                     <p>{lists[index].work}</p>
-                    <button onClick={()=>change(index)}>Change</button>
+                    <p>Status:{(lists[index].done).toString()}</p>
+                    <button onClick={()=>change(index)}  >Change</button>
+                    {showStatus((lists[index].done).toString())}
                     </div>
                 ))
             }
